@@ -2,7 +2,7 @@
 This script lists all the folders in a main folder using the [Depth First Search](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)
 
 ## Test
-to test this algorithm: 
+to test this algorithm we create the following folders: 
 
 ```
 mkdir -p root/{a/{a1,a2/{a21,a22,a23},a3/{a31,a32}},b/b1/{b21,b22},c/{c1,c2},d}
@@ -29,14 +29,14 @@ root
 │   └── c2
 └── d
 ```
-Now place the script dfs.sh and run it
+Now place the script dfs.sh in the **root** folder and run it
 
 ```
 chmod +x dfs.sh
 ./dfs.sh
 ```
 
-The output should be:
+The output should be (in my case):
 
 ```
 ==> treating /home/yassine/root
@@ -86,11 +86,11 @@ The output should be:
 	--> The stack now contains /home/yassine/root /home/yassine/root/c /home/yassine/root/c/c1
 	 --> cannot go further! unstacking /home/yassine/root/c/c1
 ==> treating c2
-	--> The stack now contains /home/yassine/root /home/yassine/root/c /home/yassine/root/c/c2
+	 --> The stack now contains /home/yassine/root /home/yassine/root/c /home/yassine/root/c/c2
 	 --> cannot go further! unstacking /home/yassine/root/c/c2
 	 --> cannot go further! unstacking /home/yassine/root/c
 ==> treating d
-	--> The stack now contains /home/yassine/root /home/yassine/root/d
+	 --> The stack now contains /home/yassine/root /home/yassine/root/d
 	 --> cannot go further! unstacking /home/yassine/root/d
 	 --> cannot go further! unstacking /home/yassine/root
 done

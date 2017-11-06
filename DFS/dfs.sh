@@ -52,4 +52,4 @@ function loop_through()
 
 stack
 echo ${STACK[*]}
-#unset STACK
+unset STACK
